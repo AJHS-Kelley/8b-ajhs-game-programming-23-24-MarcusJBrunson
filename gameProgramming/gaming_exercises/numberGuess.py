@@ -44,11 +44,24 @@ x += 1
 # Game Loop 
 print("You need to guess a number from 0 to 20 and you have four guesses. \n If you guess it right, you get a point, If you guess it wrong the CPU gets a point") 
 print("Select between a difficulty of easy, hard, godTier") 
-if difficulty = godTier
-sercetNumber = random.randint(rangeMin,rangeMax) 
-numAttempts = 2 
-rangeMin = 0 
-rangeMax = 100
+Easy = 1 
+Hard = 2 
+godTier = 3
+if difficulty == Easy:
+    sercetNumber = random.randint(rangeMin,rangeMax) 
+    numAttempts = 3
+    rangeMin = 0 
+    rangeMax = 10
+elif difficulty == Hard:
+    sercetNumber = random.randint(rangeMin,rangeMax) 
+    numAttempts = 2
+    rangeMin = 0 
+    rangeMax = 30 
+elif difficulty == godTier: 
+    sercetNumber = random.randint(rangeMin,rangeMax) 
+    numAttempts = 2
+    rangeMin = 0 
+    rangeMax = 100
 # ADD CODE HERE TO CHANGE BETWEEN EACH MATCH 
 # PRINT () an explanation of your three difficulty levels. 
 # Use input () to store difficulty in difficulty variable. 
@@ -56,7 +69,7 @@ rangeMax = 100
 while playerScore != 3 and cpuScore != 3: # Start THE MATCH (GAME)
     # Difficulty code need to be BEFORE the round starts.
     # pass -- Tells PYTHON to skip this block of code 
-    print(f"Player Score: {playerScore}");cpuScore: {cpuScore};\n 
+    print(f"Player Score: {playerScore} cpuScore: {cpuScore};\n") 
     sercetNumber = random.randint(rangeMin,rangeMax) 
 # Whenever you assign a specific value to something, it's called "hard coded".
     # print(sercetNumber)
@@ -73,7 +86,7 @@ for guesses in range(4): # START THE ROUND!
     # float() will convet to a FLOAT 
     print(f"You have chosen {playerGuess}, Let's see if your right!\n") 
     if playerGuess == sercetNumber: 
-    print("Whoa dude, what a guess! You got it!\n") 
+        print("Whoa dude, what a guess! You got it!\n") 
     playerScore += 1 
     break # IMMEDATELY EXIT ANY LOOP YOU ARE IN!
 else: 
