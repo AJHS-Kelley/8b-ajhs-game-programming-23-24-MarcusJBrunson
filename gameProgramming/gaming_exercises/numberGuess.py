@@ -57,7 +57,7 @@ elif difficulty == Hard:
     numAttempts = 2
     rangeMin = 0 
     rangeMax = 30 
-elif difficulty == godTier: 
+elif difficulty == godTier:
     sercetNumber = random.randint(rangeMin,rangeMax) 
     numAttempts = 2
     rangeMin = 0 
@@ -66,10 +66,10 @@ elif difficulty == godTier:
 # PRINT () an explanation of your three difficulty levels. 
 # Use input () to store difficulty in difficulty variable. 
 # assign values to numAttempts, rangeMin, and rangeMax based on choice
-while playerScore != 3 and cpuScore != 3: # Start THE MATCH (GAME)
+    while playerScore != 3 and cpuScore != 3: # Start THE MATCH (GAME)
     # Difficulty code need to be BEFORE the round starts.
     # pass -- Tells PYTHON to skip this block of code 
-    print(f"Player Score: {playerScore} cpuScore: {cpuScore};\n") 
+        print(f"Player Score: {playerScore} cpuScore: {cpuScore};\n") 
     sercetNumber = random.randint(rangeMin,rangeMax) 
 # Whenever you assign a specific value to something, it's called "hard coded".
     # print(sercetNumber)
@@ -77,9 +77,9 @@ while playerScore != 3 and cpuScore != 3: # Start THE MATCH (GAME)
     
     
     numGuesses = 0
-for guesses in range(4): # START THE ROUND! 
+    for guesses in range(4): # START THE ROUND! 
     # Put Difficulty CODE 
-    print(f"You have {4 - numGuesses} guesses remaining,\n")
+        print(f"You have {4 - numGuesses} guesses remaining,\n")
     playerGuess = input("Type a number from 0 to 20 and press ENTER,\n") 
     # input() saves all data as a string by default. 
     # int() will covert to a INTEGER     
@@ -87,10 +87,9 @@ for guesses in range(4): # START THE ROUND!
     print(f"You have chosen {playerGuess}, Let's see if your right!\n") 
     if playerGuess == sercetNumber: 
         print("Whoa dude, what a guess! You got it!\n") 
-    playerScore += 1 
-    break # IMMEDATELY EXIT ANY LOOP YOU ARE IN!
-else: 
-    print("You did not guess correctly,\n") 
+        playerScore += 1 
+    else: 
+        print("You did not guess correctly,\n") 
     if playerGuess > sercetNumber: 
         print("Your guess is too high,\n") 
     else: 
