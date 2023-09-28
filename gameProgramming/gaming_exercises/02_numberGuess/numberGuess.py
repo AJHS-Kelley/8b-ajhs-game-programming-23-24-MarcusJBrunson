@@ -39,7 +39,8 @@ x = 0
 while x < 50:
     sercetNumber = random.randint(0,20) 
 print(sercetNumber) 
-x += 1
+x += 1 # This line of code is not in the scope of the while loop.  This creates an infinite loop. 
+# The fact that you have an infinite loop at the start of your program indicates it was not tested.
 
 # Game Loop 
 print("You need to guess a number from 0 to 20 and you have four guesses. \n If you guess it right, you get a point, If you guess it wrong the CPU gets a point") 
