@@ -44,21 +44,23 @@ x += 1 # This line of code is not in the scope of the while loop.  This creates 
 
 # Game Loop 
 print("You need to guess a number from 0 to 20 and you have four guesses. \n If you guess it right, you get a point, If you guess it wrong the CPU gets a point") 
-print("Select between a difficulty of easy, hard, godTier") 
+print("Select between a difficulty of Easy, Medium, Hard") 
 Easy = 1 
-Hard = 2 
-godTier = 3
+Medium = 2 
+Hard = 3
 if difficulty == Easy:
+    print("You have selected Easy as your difficulty") 
+    print("You need to guess a number from 0 to 10 and you have three guesses. \n If you guess it right, you get a point, If you guess it wrong the CPU gets a point") 
     sercetNumber = random.randint(rangeMin,rangeMax) 
     numAttempts = 3
     rangeMin = 0 
     rangeMax = 10
-elif difficulty == Hard:
+elif difficulty == Medium:
     sercetNumber = random.randint(rangeMin,rangeMax) 
     numAttempts = 2
     rangeMin = 0 
     rangeMax = 30 
-elif difficulty == godTier:
+elif difficulty == Hard:
     sercetNumber = random.randint(rangeMin,rangeMax) 
     numAttempts = 2
     rangeMin = 0 
