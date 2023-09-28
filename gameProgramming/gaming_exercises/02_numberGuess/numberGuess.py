@@ -16,7 +16,7 @@ import random # import te random module to our code.
 
 # DECLARATIOINS 
 sercetNumber = -1 # Range: 0 -- 20
-playerName = "" # empty string 
+playerName = "Marcus"
 playerScore = 0
 cpuScore = 0
 numGuesses = 0 
@@ -38,14 +38,14 @@ print("""
 x = 0
 while x < 50:
     sercetNumber = random.randint(0,20) 
-print(sercetNumber) 
-x += 1 # This line of code is not in the scope of the while loop.  This creates an infinite loop. 
+    print(sercetNumber) 
+    x += 1 # This line of code is not in the scope of the while loop.  This creates an infinite loop. 
 # The fact that you have an infinite loop at the start of your program indicates it was not tested.
 
 # Game Loop 
-print("You need to guess a number from 0 to 20 and you have four guesses. \n If you guess it right, you get a point, If you guess it wrong the CPU gets a point") 
-print("Select between a difficulty of Easy, Medium, Hard") 
-Easy = 1 
+print("Select between a difficulty of Easy, Medium, Hard")  
+
+Easy = 1
 Medium = 2 
 Hard = 3
 if difficulty == Easy:
@@ -69,10 +69,10 @@ elif difficulty == Hard:
 # PRINT () an explanation of your three difficulty levels. 
 # Use input () to store difficulty in difficulty variable. 
 # assign values to numAttempts, rangeMin, and rangeMax based on choice
-    while playerScore != 3 and cpuScore != 3: # Start THE MATCH (GAME)
+while playerScore != 3 and cpuScore != 3: # Start THE MATCH (GAME)
     # Difficulty code need to be BEFORE the round starts.
     # pass -- Tells PYTHON to skip this block of code 
-        print(f"Player Score: {playerScore} cpuScore: {cpuScore};\n") 
+    print(f"Player Score: {playerScore} cpuScore: {cpuScore};\n") 
     sercetNumber = random.randint(rangeMin,rangeMax) 
 # Whenever you assign a specific value to something, it's called "hard coded".
     # print(sercetNumber)
@@ -83,25 +83,27 @@ elif difficulty == Hard:
     for guesses in range(4): # START THE ROUND! 
     # Put Difficulty CODE 
         print(f"You have {4 - numGuesses} guesses remaining,\n")
-    playerGuess = input("Type a number from 0 to 20 and press ENTER,\n") 
+        playerGuess = input("Type a number from 0 to 20 and press ENTER,\n") 
     # input() saves all data as a string by default. 
     # int() will covert to a INTEGER     
     # float() will convet to a FLOAT 
-    print(f"You have chosen {playerGuess}, Let's see if your right!\n") 
-    if playerGuess == sercetNumber: 
-        print("Whoa dude, what a guess! You got it!\n") 
-        playerScore += 1 
-    else: 
-        print("You did not guess correctly,\n") 
-    if playerGuess > sercetNumber: 
-        print("Your guess is too high,\n") 
-    else: 
-        print("Your guess is too low,\n") 
+        print(f"You have chosen {playerGuess}, Let's see if your right!\n") 
+        if playerGuess == sercetNumber: 
+            print("Whoa dude, what a guess! You got it!\n") 
+            playerScore += 1 
+        else: 
+            print("You did not guess correctly,\n") 
+        if playerGuess > sercetNumber: 
+            print("Your guess is too high,\n") 
+        else: 
+            print("Your guess is too low,\n") 
     numGuesses += 1 
     if playerGuess != sercetNumber: 
         cpuScore += 1
         print("The cpu wins a point since you ran out of guesses")
+
+
 if playerScore >= 3:
     print("Winner, Winner, chicken dinner! You scored 3 points first!\n") 
 else:
-    print("Yo, you lost to a computer, ") 
+    print("Yo, you lost to a computer")  
