@@ -46,24 +46,19 @@ print("""
 # Game Loop 
 print("Select between a difficulty of Easy, Medium, Hard")  
 # NO CODE TO ALLOW PLAYER TO SELECT DIFFICULTY. 
-difficulty = input("Blah blah blah.\n") # Add code here to get difficulty.  
-Easy = 1
-Medium = 2 
-Hard = 3
-if difficulty == Easy:
-    print("You have selected Easy as your difficulty") 
+difficulty = input("Type Easy,medium, or Hard as your difficiulty /n") # Add code here to get difficulty.
+
+if difficulty == "Easy":
+    print("You have selected Easy as your difficulty")  
     print("You need to guess a number from 0 to 10 and you have three guesses. \n If you guess it right, you get a point, If you guess it wrong the CPU gets a point")     
     numAttempts = 3
     rangeMin = 0 
-    rangeMax = 10
-    sercetNumber = random.randint(rangeMin,rangeMax) 
-elif difficulty == Medium:
-    sercetNumber = random.randint(rangeMin,rangeMax) 
+    rangeMax = 8 
+elif difficulty == "Medium":
     numAttempts = 2
     rangeMin = 0 
     rangeMax = 30 
-elif difficulty == Hard:
-    sercetNumber = random.randint(rangeMin,rangeMax) 
+elif difficulty == "Hard": 
     numAttempts = 2
     rangeMin = 0 
     rangeMax = 100
