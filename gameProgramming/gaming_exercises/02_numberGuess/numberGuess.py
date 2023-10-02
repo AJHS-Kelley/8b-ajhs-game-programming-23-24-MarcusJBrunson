@@ -35,26 +35,28 @@ print("""
      """) 
 
 # CPU SECRET NUBER GENERATION 
-x = 0
-while x < 50:
-    sercetNumber = random.randint(0,20) 
-    print(sercetNumber) 
-    x += 1 # This line of code is not in the scope of the while loop.  This creates an infinite loop. 
+# REMOVE THIS LOOP, IT WAS ONLY USED TO TEST THE SECRET NUMBER GENERATION. 
+# x = 0
+# while x < 50:
+#     sercetNumber = random.randint(0,20) 
+#     print(sercetNumber) 
+#     x += 1 # This line of code is not in the scope of the while loop.  This creates an infinite loop. 
 # The fact that you have an infinite loop at the start of your program indicates it was not tested.
 
 # Game Loop 
 print("Select between a difficulty of Easy, Medium, Hard")  
-
+# NO CODE TO ALLOW PLAYER TO SELECT DIFFICULTY. 
+difficulty = input("Blah blah blah.\n") # Add code here to get difficulty.  
 Easy = 1
 Medium = 2 
 Hard = 3
 if difficulty == Easy:
     print("You have selected Easy as your difficulty") 
-    print("You need to guess a number from 0 to 10 and you have three guesses. \n If you guess it right, you get a point, If you guess it wrong the CPU gets a point") 
-    sercetNumber = random.randint(rangeMin,rangeMax) 
+    print("You need to guess a number from 0 to 10 and you have three guesses. \n If you guess it right, you get a point, If you guess it wrong the CPU gets a point")     
     numAttempts = 3
     rangeMin = 0 
     rangeMax = 10
+    sercetNumber = random.randint(rangeMin,rangeMax) 
 elif difficulty == Medium:
     sercetNumber = random.randint(rangeMin,rangeMax) 
     numAttempts = 2
@@ -73,17 +75,17 @@ while playerScore != 3 and cpuScore != 3: # Start THE MATCH (GAME)
     # Difficulty code need to be BEFORE the round starts.
     # pass -- Tells PYTHON to skip this block of code 
     print(f"Player Score: {playerScore} cpuScore: {cpuScore};\n") 
-    sercetNumber = random.randint(rangeMin,rangeMax) 
+    sercetNumber = random.randint(rangeMin,rangeMax) # THIS LINE OVERRIDES THE THE secretNumber = random.randint(rangeMin, rangeMax) CODE EARLIER.  REMOVE THE EARLIER CODE.
 # Whenever you assign a specific value to something, it's called "hard coded".
     # print(sercetNumber)
      
     
     
     numGuesses = 0
-    for guesses in range(4): # START THE ROUND! 
+    for guesses in range(4): # START THE ROUND! UPDATE TO USE THE NUM. ATTEMPTS VARIABLE. 
     # Put Difficulty CODE 
-        print(f"You have {4 - numGuesses} guesses remaining,\n")
-        playerGuess = input("Type a number from 0 to 20 and press ENTER,\n") 
+        print(f"You have {4 - numGuesses} guesses remaining,\n") # UPDATE TO USE THE NUM. ATTEMPTS VARIABLE. 
+        playerGuess = int(input("Type a number from 0 to 20 and press ENTER,\n")) # YOU NEED TO USE THE int() CODE.  
     # input() saves all data as a string by default. 
     # int() will covert to a INTEGER     
     # float() will convet to a FLOAT 
