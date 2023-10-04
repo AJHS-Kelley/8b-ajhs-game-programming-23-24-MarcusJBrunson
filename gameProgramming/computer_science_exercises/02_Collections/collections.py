@@ -1,4 +1,4 @@
-# collections Examples, Marcus Brunson, v0.1d
+# collections Examples, Marcus Brunson, v0.2a
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS DUPLICATE VALUES 
 breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"] 
@@ -8,6 +8,7 @@ breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
 # Python Only: index -1 is the last item on the list. 
 testScores= [95, 100, 25, 15, 27, 35] 
 classGPA= [3.14, 2.25, 1.74, 1.99, 0.99, 4,25] 
+
 
 # Printing Contents of an List 
 #print(breakfastFoods) 
@@ -29,4 +30,22 @@ classGPA= [3.14, 2.25, 1.74, 1.99, 0.99, 4,25]
 #print(testScores[2]) 
 #print(classGPA[2]) 
 
+# Changing items in a List 
+#breakfastFoods[0] = "Sausage" 
+#testScores[0] = 97 
+#classGPA[0] = 3.57 
+#print(breakfastFoods[0]) 
+#print(testScores[0])
+#print(classGPA [0])
+#print(breakfastFoods) 
+#print(testScores)
+#print(classGPA) 
 
+breakfastFoods[4] = "Eggs" 
+testScores[4] = 50 
+classGPA = 2.54
+print(breakfastFoods) 
+print(testScores)
+print(classGPA) 
+
+ 
