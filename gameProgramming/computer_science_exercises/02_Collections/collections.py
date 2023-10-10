@@ -41,11 +41,36 @@ classGPA= [3.14, 2.25, 1.74, 1.99, 0.99, 4,25]
 #print(testScores)
 #print(classGPA) 
 
-breakfastFoods[4] = "Eggs" 
-testScores[4] = 50 
-classGPA = 2.54
+#breakfastFoods[4] = "Eggs" 
+#testScores[4] = 50 
+#classGPA = 2.54
+#print(breakfastFoods) 
+#print(testScores)
+#print(classGPA) 
+
+# Adding and Inserting Items to a List 
+# .append() adds an item to the END of a list. 
+breakfastFoods.append("hash browns") 
 print(breakfastFoods) 
-print(testScores)
+testScores.append(99) 
+print(testScores) 
+classGPA.append(1.99) 
+print(classGPA) 
+
+# .inset() allows you to place an item at a specific index in the list.
+breakfastFoods.insert(3, "Parfait") 
+print(breakfastFoods) 
+testScores.insert(3, 55) 
+print(testScores) 
+classGPA.insert(3, 0.0) 
+print(classGPA) 
+
+
+breakfastFoods.append("Toast") 
+print(breakfastFoods) 
+testScores.append(88) 
+print(testScores) 
+classGPA.append(2.99) 
 print(classGPA) 
 
  
