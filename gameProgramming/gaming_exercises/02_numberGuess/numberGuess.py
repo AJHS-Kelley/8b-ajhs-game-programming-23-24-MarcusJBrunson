@@ -46,7 +46,7 @@ print("""
 # Game Loop 
 print("Select between a difficulty of Easy, Medium, Hard")  
 # NO CODE TO ALLOW PLAYER TO SELECT DIFFICULTY. 
-difficulty = input("Type Easy,medium, or Hard as your difficiulty /n") # Add code here to get difficulty.
+difficulty = input("Type Easy,medium, or Hard as your difficiulty \n") # Add code here to get difficulty.
 
 if difficulty == "Easy":
     print("You have selected Easy as your difficulty")  
@@ -90,11 +90,11 @@ while playerScore != 3 and cpuScore != 3: # Start THE MATCH (GAME)
             playerScore += 1 
         else: 
             print("You did not guess correctly,\n") 
-        if playerGuess > sercetNumber: 
-            print("Your guess is too high,\n") 
-        else: 
-            print("Your guess is too low,\n") 
-    numGuesses += 1 
+            if playerGuess > sercetNumber: 
+                print("Your guess is too high,\n") 
+            else: 
+                print("Your guess is too low,\n") 
+        numGuesses += 1 
     if playerGuess != sercetNumber: 
         cpuScore += 1
         print("The cpu wins a point since you ran out of guesses")
