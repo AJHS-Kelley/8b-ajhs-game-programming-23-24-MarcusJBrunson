@@ -43,9 +43,9 @@ weaponNumber = 0
 while weaponNumber < len(weaponList): 
     if weaponNumber == 0 and weaponList[0] == True: 
         print("You are wielding a shiny sword.\n") 
-    if weaponNumber == 1 and weaponList[1] == True 
+    if weaponNumber == 1 and weaponList[1] == True: 
         print("You have a laser blaster") 
-    if weaponNumber == 2 and weaponList[2] == True 
+    if weaponNumber == 2 and weaponList[2] == True: 
         print("You are wielding a flame thrower.\n") 
     if weaponNumber == 3 and weaponList[3] == True: 
         print("You are wielding a Ak-47.\n") 
