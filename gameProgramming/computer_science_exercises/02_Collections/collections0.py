@@ -55,4 +55,4 @@ while weaponNumber < len(weaponList):
         print("You are wielding a missle launcher.\n") 
     if weaponNumber == 6 and weaponList[6] == True: 
         print("You are wielding a lightsaber.\n") 
-    weaponNumber += 1
+    weaponNumber += 1 
