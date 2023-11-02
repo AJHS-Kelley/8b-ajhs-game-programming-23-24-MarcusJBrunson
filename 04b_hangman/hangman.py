@@ -90,6 +90,23 @@ def playAgain():
     print('Do you want to play again? yes or no?')
     return input().lower().startswith('y')
 
+# Introduce the Game 
+print('Welcome to Hangman by Marcus B.')
+missedLetters = ''
+correctLetters = ''
+secretWord = getRandomWord(words)
+gameIsDone = False
+
+# Main Game Loop
+while True:
+    displayBoard(missedLetters, correctLetters, secretWord) 
+
+    guess = getGuess(missedLetters + correctLetters)
+
+    if guess in secretWord:
+        correctLetters = correctLetters + guess 
+
+        
 
 # i = 0
 # while i < 50:
