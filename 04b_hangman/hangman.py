@@ -43,7 +43,7 @@ HANGMAN_BOARD =['''
     O       |
    /|\    |
    / \ |
-    ======''',] 
+    ======''']
 
 # Pick Word from List 
 def getRandomWord(wordList): # Return a random word from the list
@@ -58,6 +58,17 @@ def displayBoard(missedLetters, correctLetters, sercetWord):
     print('Missed Letters:', end = ' ')
     for eachLetter in missedLetters:
         print(eachLetter, end = ' ')
+    print()
+    
+    blanks = '_' * len(sercetWord) 
+    
+    # Replace Blanks with Correct Letters 
+    for i in range(len(sercetWord)): 
+        if sercetWord[i] in correctLetters: 
+            blanks = blanks[:i] + sercetWord[i] + blanks[i+1:]
+
+    for letter in blanks:
+        print(letter, end = ' ')
     print()
 
 # i = 0
