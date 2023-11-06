@@ -6,7 +6,7 @@ import random
 # Actual Dictionary Word (Key) : Value (Definition)
 # Uses {} to specifiy a dictionary.
 words = {'Colors': 'red orange yellow green blue black white sliver gold teal'.split(),
-         'Animals: 'cat cow dog moose duck fish wombat wolf lion alligator giraffe'.split(), 
+        'Animals: 'cat cow dog moose duck fish wombat wolf lion alligator giraffe'.split(),
          'Shapes': 'square triangle circle rhombus parallelogram trapezoid diamond hexagon'.split(), 
          'Foods': 'hamburger hotdog potato waffle pancake chips steak oysters chicken'.split()}
 
@@ -54,21 +54,21 @@ HANGMAN_BOARD =['''
     O   |
   o-|-o |
    / \  |
- 
+  o-  -o
     ======''']
 
 # Pick Word from List 
-def getRandomWord(wordList): # Return a random word from the list
-    wordIndex = random.randint(0, len(wordList)-1) 
-    # len(listname) -1 is extremely common for working with lists.
-    return wordList[wordIndex] 
+# def getRandomWord(wordList): # Return a random word from the list
+#     wordIndex = random.randint(0, len(wordList)-1) 
+#     # len(listname) -1 is extremely common for working with lists.
+#     return wordList[wordIndex] 
 
 # Pick Word from Dictionary
 def getRandomWord(wordDict): # Return a random word from the list
     wordKey = random.choice(list(wordDict.keys()))
     wordIndex = random.randit(o,len(wordDict[wordKey])-1) 
     # len(listname) -1 is extremely common for working with lists.
-    return [wordDict[wordKey][wordIndex], wordKey]
+    return [wordDict[wordKey][wordIndex], wordKey] 
 
 def displayBoard(missedLetters, correctLetters, sercetWord):
     print(HANGMAN_BOARD[len(missedLetters)])
@@ -128,10 +128,12 @@ if difficulty == 'H': # HARD
 
 missedLetters = ''
 correctLetters = ''
-secretWord = getRandomWord(words)
+secretWord, secretSet = getRandomWord(words)
 gameIsDone = False 
+
 # Main Game Loop
 while True:
+    print('The secret word is from the ' + secretSet + 'category.\n')
     displayBoard(missedLetters, correctLetters, secretWord) 
 
     guess = getGuess(missedLetters + correctLetters)
@@ -165,7 +167,7 @@ while True:
             missedLetters = ''
             correctLetters = ''
             gameIsDone = False
-            secretWord = getRandomWord(words)
+            secretWord, secretSet = getRandomWord(words)
         else:
             break
 
@@ -175,4 +177,3 @@ while True:
 #     word = getRandomWord(words)
 #     print(word)
 #     i += 1
-
