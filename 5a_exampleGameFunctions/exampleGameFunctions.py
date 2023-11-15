@@ -2,17 +2,30 @@
 import random
 # DECLARATIOINS
 playername = ""
-playerHealth = 100
-CPUHealth = 100
+playerHealth = 200
+cpuHealth = 100
 difficulty = ""
-Damage = 
+playerScore = 0
+cpuScore = 0
 
 def functionOne(difficulty):
+    difficulty = input("Type Easy, medium, or Hard as your difficiulty \n")
     if difficulty == "Easy":
-        print("You have selected Easy as your difficulty")
+        print("You have selected Easy as your difficulty") 
+       
+    elif difficulty == "Medium":
+        print("You have selected Medium as your difficulty") 
+    
+    
+    elif difficulty == "Hard":
+        print("You have selected Hard as your difficulty")
+         
+        
+
+         
 
 
-def functionTwo(param1):
+def functionTwo(comboHit):
     pass
 
 def functionThree(param1 = "Default Value"):
