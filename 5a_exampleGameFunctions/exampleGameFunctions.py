@@ -1,37 +1,43 @@
 # Example Game Functions Project, Marcus Brunson, v0.0
 import random
 # DECLARATIOINS
-playername = ""
-playerHealth = 200
-cpuHealth = 100
+playerName = ""
+opponentName = ""
+playerHealth = 100
+opponentHealth = 100
 difficulty = ""
 playerScore = 0
-cpuScore = 0
+opponentScore = 0
 
 def functionOne(difficulty):
     difficulty = input("Type Easy, medium, or Hard as your difficiulty \n")
     if difficulty == "Easy":
         print("You have selected Easy as your difficulty") 
-       
+        playerHealth = 100
+        opponentHealth = 75
     elif difficulty == "Medium":
         print("You have selected Medium as your difficulty") 
-    
-    
+        playerHealth
+        opponentHealth
     elif difficulty == "Hard":
         print("You have selected Hard as your difficulty")
-         
+        playerHealth
+        opponentHealth
         
 
          
 
 
-def functionTwo(comboHit):
-    pass
+def specialAttack(player, opponent):
+    if playerHealth <= 50:
+        specialAttack = True
+        print("player unleashes a devasting special attack on the opponent and deales 50 damage!")
 
-def functionThree(param1 = "Default Value"):
-    print(param1)
 
-    def functionFour(param1, param2, param3):
+def defend(player = "Default Value"):
+    print(player)
+
+    def attack(player, opponent, damage):
         pass
 
     def catchBall(throwQuality, passCatcherScore, weather):
