@@ -23,26 +23,31 @@ def functionOne(difficulty):
         print("You have selected Hard as your difficulty")
         playerHealth
         opponentHealth
-        
-
-         
 
 
-def specialAttack(player, opponent):
+def specialAttack(playerName, opponentName, playerHealth):
     if playerHealth <= 30:
         specialAttack = True
         print(f"{playerName} unleashes a devasting special attack on {opponentName} and deals 50 damage!")
-    elif playerHealth >= 30:
+    elif playerHealth > 30:
         specialAttack = False
         print(f"{playerName} is unable to unleash a special attack on {opponentName}")
-    return specialAttack
+    return specialAttack 
 
 def defend(player = "Default Value"):
     print(player)
 
-    def attack(player, opponent, damage):
+def attack(playerName, opponentHealth, damage):
         opponentHealth != 100
-        print(f"{playerName} attacks {opponentHealth} and deals damage")
+        print(f"{playerName} attacks {opponentHealth} and deals {damage}")
+
+if playerHealth == 0:
+     print("Yo, you lost")
+     opponentScore += 1
+else: 
+    opponentHealth == 0
+    print("Winner, Winner, chicken dinner!")
+    playerScore += 1
 
 
 def catchBall(throwQuality, passCatcherScore, weather):
