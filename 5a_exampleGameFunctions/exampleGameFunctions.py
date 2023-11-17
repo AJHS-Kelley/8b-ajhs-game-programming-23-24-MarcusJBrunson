@@ -29,26 +29,31 @@ def functionOne(difficulty):
 
 
 def specialAttack(player, opponent):
-    if playerHealth <= 50:
+    if playerHealth <= 30:
         specialAttack = True
-        print("player unleashes a devasting special attack on the opponent and deales 50 damage!")
-
+        print(f"{playerName} unleashes a devasting special attack on {opponentName} and deals 50 damage!")
+    elif playerHealth >= 30:
+        specialAttack = False
+        print(f"{playerName} is unable to unleash a special attack on {opponentName}")
+    return specialAttack
 
 def defend(player = "Default Value"):
     print(player)
 
     def attack(player, opponent, damage):
-        pass
+        opponentHealth != 100
+        print(f"{playerName} attacks {opponentHealth} and deals damage")
 
-    def catchBall(throwQuality, passCatcherScore, weather):
-        if throwQuality > 5.0 and passCatcherScore >= 99 and weather == 'Sunny':
+
+def catchBall(throwQuality, passCatcherScore, weather):
+    if throwQuality > 5.0 and passCatcherScore >= 99 and weather == 'Sunny':
             ballcaught = True
-        elif throwQuality > 4.0 and passCatcherScore >= 75 and weather == 'Windy':
+    elif throwQuality > 4.0 and passCatcherScore >= 75 and weather == 'Windy':
             ballcaught = False
-        else:
+    else:
             print('oh, no, interception!\n')
             ballIntercepted = True
-        return ballcaught
+    return ballcaught
     
     catchBall(4.25, 107, 'Rainy')
 
