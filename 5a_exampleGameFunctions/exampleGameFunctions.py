@@ -1,5 +1,6 @@
 # Example Game Functions Project, Marcus Brunson, v0.0
 import random
+
 # DECLARATIOINS
 playerName = ""
 opponentName = ""
@@ -10,7 +11,7 @@ playerScore = 0
 opponentScore = 0
 
 def functionOne(difficulty):
-    difficulty = input("Type Easy, medium, or Hard as your difficiulty \n")
+    difficulty = input("Type Easy, Medium, or Hard as your difficiulty \n")
     if difficulty == "Easy":
         print("You have selected Easy as your difficulty") 
         playerHealth = 100
