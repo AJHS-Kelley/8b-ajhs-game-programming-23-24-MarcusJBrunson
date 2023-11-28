@@ -49,7 +49,6 @@ else:
     print("Winner, Winner, chicken dinner!")
     playerScore += 1
 
-
 def catchBall(throwQuality, passCatcherScore, weather):
     if throwQuality > 5.0 and passCatcherScore >= 99 and weather == 'Sunny':
             ballcaught = True
@@ -61,6 +60,3 @@ def catchBall(throwQuality, passCatcherScore, weather):
     return ballcaught
     
     catchBall(4.25, 107, 'Rainy')
-
-    
-        
