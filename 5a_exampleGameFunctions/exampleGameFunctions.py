@@ -10,21 +10,15 @@ difficulty = ""
 playerScore = 0
 opponentScore = 0
 
-def functionOne(difficulty):
+def fight(difficulty):
     difficulty = input("Type Easy, Medium, or Hard as your difficiulty \n")
-    if difficulty == "Easy":
-        print("You have selected Easy as your difficulty") 
-        playerHealth = 100
-        opponentHealth = 75
-    elif difficulty == "Medium":
-        print("You have selected Medium as your difficulty") 
-        playerHealth
-        opponentHealth
-    elif difficulty == "Hard":
-        print("You have selected Hard as your difficulty")
-        playerHealth
-        opponentHealth
+    playerHealth = 100 
+    opponentHealth = 100 
 
+    while playerHealth > 0 and opponentHealth > 0:
+         # Player's turn
+         playerattackDamage = random.randint(10,20) * difficulty
+         opponentHealth -= playerattackDamage
 
 def specialAttack(playerName, opponentName, playerHealth):
     if playerHealth <= 30:
@@ -35,8 +29,8 @@ def specialAttack(playerName, opponentName, playerHealth):
         print(f"{playerName} is unable to unleash a special attack on {opponentName}")
     return specialAttack 
 
-def defend(player = "Default Value"):
-    print(player)
+def defend(player):
+    player
 
 def attack(playerName, opponentHealth, damage):
         opponentHealth != 100
