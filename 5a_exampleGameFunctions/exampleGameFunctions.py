@@ -20,6 +20,23 @@ def fight(difficulty):
          playerattackDamage = random.randint(10,20) * difficulty
          opponentHealth -= playerattackDamage
 
+         if opponentHealth <= 0:
+              print("You win!")
+              playerScore += 1
+              break
+         
+         # Opponent's turn 
+         opponentattackDamage = random.randint(5,15) * difficulty
+         playerHealth -= opponentattackDamage
+
+         if playerHealth <= 0:
+              print("You lose!")
+              opponentHealth += 1
+              break
+         
+         print("Game over")
+              
+
 def specialAttack(playerName, opponentName, playerHealth):
     if playerHealth <= 30:
         specialAttack = True
@@ -35,14 +52,6 @@ def defend(player):
 def attack(playerName, opponentHealth, damage):
         opponentHealth != 100
         print(f"{playerName} attacks {opponentHealth} and deals {damage}")
-
-if playerHealth == 0:
-     print("Yo, you lost")
-     opponentScore += 1
-else: 
-    opponentHealth == 0
-    print("Winner, Winner, chicken dinner!")
-    playerScore += 1
 
 def catchBall(throwQuality, passCatcherScore, weather):
     if throwQuality > 5.0 and passCatcherScore >= 99 and weather == 'Sunny':
