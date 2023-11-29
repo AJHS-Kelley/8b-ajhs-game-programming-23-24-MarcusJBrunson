@@ -1,6 +1,5 @@
 # Example Game Functions Project, Marcus Brunson, v0.0
 import random
-
 # DECLARATIOINS
 playerName = ""
 opponentName = ""
@@ -47,20 +46,9 @@ def specialAttack(playerName, opponentName, playerHealth):
     return specialAttack 
 
 def defend(player):
-    player
+    playerDefense += 5
+    print(f"{playerName} takes a defensive stance, increasing their defense by 5!")
 
 def attack(playerName, opponentHealth, damage):
         opponentHealth != 100
         print(f"{playerName} attacks {opponentHealth} and deals {damage}")
-
-def catchBall(throwQuality, passCatcherScore, weather):
-    if throwQuality > 5.0 and passCatcherScore >= 99 and weather == 'Sunny':
-            ballcaught = True
-    elif throwQuality > 4.0 and passCatcherScore >= 75 and weather == 'Windy':
-            ballcaught = False
-    else:
-            print('oh, no, interception!\n')
-            ballIntercepted = True
-    return ballcaught
-    
-    catchBall(4.25, 107, 'Rainy')
