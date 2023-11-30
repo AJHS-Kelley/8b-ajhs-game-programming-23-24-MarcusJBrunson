@@ -52,3 +52,21 @@ def defend(player):
 def attack(playerName, opponentHealth, damage):
         opponentHealth != 100
         print(f"{playerName} attacks {opponentHealth} and deals {damage}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Code Review by Trevis Brown
