@@ -10,30 +10,31 @@ playerScore = 0
 opponentScore = 0
 
 def fight(difficulty):
+
     difficulty = input("Type Easy, Medium, or Hard as your difficiulty \n")
     playerHealth = 100 
-    opponentHealth = 100 
+    opponentHealth = 100
 
     while playerHealth > 0 and opponentHealth > 0:
          # Player's turn
-         playerattackDamage = random.randint(10,20) * difficulty    c
-         opponentHealth -= playerattackDamage
+        playerattackDamage = random.randint(10,20) * difficulty
+        opponentHealth -= playerattackDamage
+        
+        # Opponent's turn
+        opponentattackDamage = random.randint(5,15) * difficulty
+        playerHealth -= opponentattackDamage
 
-         if opponentHealth <= 0:
+        if opponentHealth <= 0:
               print("You win!")
               playerScore += 1
               break
-         
-         # Opponent's turn 
-         opponentattackDamage = random.randint(5,15) * difficulty
-         playerHealth -= opponentattackDamage
 
-         if playerHealth <= 0:
+        if playerHealth <= 0:
               print("You lose!")
               opponentHealth += 1
               break
          
-         print("Game over")
+        print("Game over")
               
 
 def specialAttack(playerName, opponentName, playerHealth):
@@ -55,7 +56,7 @@ def defend(player):
 
 # Please Finish This Function.
 def attack(playerName, opponentHealth, damage):
-        opponentHealth != 100
+    if opponentHealth != 100:
         print(f"{playerName} attacks {opponentHealth} and deals {damage}")
 
 # PLEASE MAKE SURE TO CALL AND TEST THE FUNCTIONS. 
