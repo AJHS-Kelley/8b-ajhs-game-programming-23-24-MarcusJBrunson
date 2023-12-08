@@ -16,7 +16,7 @@ def fight(difficulty):
 
     while playerHealth > 0 and opponentHealth > 0:
          # Player's turn
-         playerattackDamage = random.randint(10,20) * difficulty
+         playerattackDamage = random.randint(10,20) * difficulty    c
          opponentHealth -= playerattackDamage
 
          if opponentHealth <= 0:
@@ -43,7 +43,7 @@ def specialAttack(playerName, opponentName, playerHealth):
     elif playerHealth > 30:
         specialAttack = False
         print(f"{playerName} is unable to unleash a special attack on {opponentName}")
-    return specialAttack 
+        return specialAttack 
 
 def defend(player):
     playerDefense += 5
