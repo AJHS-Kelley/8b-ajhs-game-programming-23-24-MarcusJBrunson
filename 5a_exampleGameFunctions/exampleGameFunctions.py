@@ -45,15 +45,20 @@ def specialAttack(playerName, opponentName, playerHealth):
         print(f"{playerName} is unable to unleash a special attack on {opponentName}")
         return specialAttack 
 
+
+specialAttack("Ryan", "Marcus", 30)
+
+# Please Finish This Function.
 def defend(player):
     playerDefense += 5
     print(f"{playerName} takes a defensive stance, increasing their defense by 5!")
 
+# Please Finish This Function.
 def attack(playerName, opponentHealth, damage):
         opponentHealth != 100
         print(f"{playerName} attacks {opponentHealth} and deals {damage}")
 
-
+# PLEASE MAKE SURE TO CALL AND TEST THE FUNCTIONS. 
 
 
 
