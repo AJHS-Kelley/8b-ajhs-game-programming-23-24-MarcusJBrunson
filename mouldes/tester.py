@@ -1,4 +1,5 @@
-import dice 
+import dice
+import perfmon
 
 
 roll1= dice.roll(1,6)
