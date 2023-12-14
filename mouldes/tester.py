@@ -1,5 +1,6 @@
 import dice
 import perfmon
+start = perfmon.execStart()
 
 
 roll1= dice.roll(1,6)
