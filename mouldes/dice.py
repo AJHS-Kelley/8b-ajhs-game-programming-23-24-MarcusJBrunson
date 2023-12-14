@@ -2,7 +2,7 @@
 import random
 
 def roll(numDice, sizeDice):
-   numRolled = 0
+   numRolled = 0 # Verified Working 12-14-23
    sum = 0
    while numRolled < numDice: 
         roll = random.randint(1, sizeDice)
@@ -21,3 +21,9 @@ def display(numDice, sizeDice):
         numRolled += 1
         return sum 
    
+def isDoubles(roll1, roll2):
+    if roll1 == roll2:
+        isDoubles = True
+    else:
+        isDoubles = False
+        return isDoubles
