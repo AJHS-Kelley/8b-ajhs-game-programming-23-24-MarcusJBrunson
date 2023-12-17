@@ -61,6 +61,13 @@ def attack(attacker, defender):
      applyDamage(defender, damage)
      print(f"{attacker} attacked {defend} and dealt {damage} damage.")
 
+def calculateDamage(attacker):
+     if attacker == playerName:
+          return 20
+     elif attacker == opponentName:
+          return 15
+
+
      
 
 # PLEASE MAKE SURE TO CALL AND TEST THE FUNCTIONS. 
