@@ -50,13 +50,17 @@ def specialAttack(playerName, opponentName, playerHealth):
 specialAttack("Ryan", "Marcus", 30)
 
 # Please Finish This Function.
-def defend(attacker, defender):
+def defend(defender):
+     defense = calculateDefense(defender)
+     print(f"{defender} defended and reduced the damage recevied by {defense}.")
+     return defense
 
 # Please Finish This Function.
 def attack(attacker, defender):
      damage = calculateDamage(attacker)
      applyDamage(defender, damage)
      print(f"{attacker} attacked {defend} and dealt {damage} damage.")
+
      
 
 # PLEASE MAKE SURE TO CALL AND TEST THE FUNCTIONS. 
