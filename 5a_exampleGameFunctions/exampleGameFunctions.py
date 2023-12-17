@@ -67,6 +67,9 @@ def calculateDamage(attacker):
      elif attacker == opponentName:
           return 15
 
+def applyDamage(defender, damage):
+     if defender == playerName:
+          print(f"{defender} received {damage} damage.")
 
      
 
