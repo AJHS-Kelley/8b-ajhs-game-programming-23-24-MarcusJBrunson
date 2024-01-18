@@ -85,6 +85,13 @@ def calcScore(rnaSequence: str, rnaTime: float) -> int:
      # Increase score, multiplier should be < 1.0
     score *= scoreMulti
     return score 
+def saveScore(dnaSequence: str, rnaSequence: str rnaTime: float) -> None:
+playername = input("What is your first name?\n")
+lastName = input("What is your name?\n")
+fullName = playername + " " + lastName
+
+fileName = "dnareplicationScore" + fullName + ".txt"
+
 
     
 dna = genDNA()
