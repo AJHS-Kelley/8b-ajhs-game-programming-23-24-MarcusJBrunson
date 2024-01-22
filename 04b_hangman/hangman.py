@@ -5,10 +5,10 @@ import random
 # Stored in Key:Value Pairs.
 # Actual Dictionary Word (Key) : Value (Definition)
 # Uses {} to specifiy a dictionary.
-words = {'Colors': 'red orange yellow green blue black white sliver gold teal'.split(),
-        'Animals: 'cat cow dog moose duck fish wombat wolf lion alligator giraffe'.split(),
-         'Shapes': 'square triangle circle rhombus parallelogram trapezoid diamond hexagon'.split(), 
-         'Foods': 'hamburger hotdog potato waffle pancake chips steak oysters chicken'.split()}
+words = {'Colors': 'red orange yellow green blue black white sliver gold teal'}.split(),
+'Animals': 'cat cow dog moose duck fish wombat wolf lion alligator giraffe'.split()
+'Shapes': 'square triangle circle rhombus parallelogram trapezoid diamond hexagon'.split()
+'Foods': 'hamburger hotdog potato waffle pancake chips steak oysters chicken'.split()
 
 # VARIABLE_NAMES IN ALL-CAPS ARE CONSTANTS ARE NOT MEANT TO CHANGE!
 HANGMAN_BOARD =['''
@@ -66,7 +66,7 @@ HANGMAN_BOARD =['''
 # Pick Word from Dictionary
 def getRandomWord(wordDict): # Return a random word from the list
     wordKey = random.choice(list(wordDict.keys()))
-    wordIndex = random.randit(o,len(wordDict[wordKey])-1) 
+    wordIndex = random.randit(len(wordDict[wordKey])-1) 
     # len(listname) -1 is extremely common for working with lists.
     return [wordDict[wordKey][wordIndex], wordKey] 
 
