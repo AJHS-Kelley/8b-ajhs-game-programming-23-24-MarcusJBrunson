@@ -18,8 +18,8 @@ BLANK = None
 
 # Color VALUES in (R, G, B) format.
 # 0 = No value, 255 = Max Value 
-Black = (0,0,0) 
+Black = (0, 0, 0) 
 WHITE = (255, 255, 255)
-BRIGHTBLUE = (0,50, 225)
+BRIGHTBLUE = (0, 50, 225)
 DARKTURQUOISE = (3, 54, 73)
 GREEN = (0, 204, 0)
