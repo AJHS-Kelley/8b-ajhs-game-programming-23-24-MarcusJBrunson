@@ -90,7 +90,6 @@ def saveScore(dnaSequence: str,rnaSequence: str, rnaTime: float, score: int) -> 
     playername = input("What is your first name?\n")
     lastName = input("What is your name?\n")
     fullName = playername + " " + lastName
-
     fileName = "dnareplicationScore" + fullName + ".txt"
     saveData = open(fileName, "a")
     # File Modes 
@@ -107,10 +106,10 @@ def saveScore(dnaSequence: str,rnaSequence: str, rnaTime: float, score: int) -> 
     
     # The lines of code below should be OUTSIDE the scope of any functions.  Move them all 4 spaces to the LEFT. 
     # Your code is not executing correctly due to these errors. 
-    dna = genDNA()
-    rna = doTranscription(dna)
-    if verifySequence(dna, rna[0]):
-        score = (calcScore(rna[0], rna[1]))
-        saveScore(dna, rna[0], rna[1])
-        print(verifySequence(dna, rna[0]))
-        print(calcScore(rna[0], rna[1]))
+dna = genDNA()
+rna = doTranscription(dna)
+if verifySequence(dna, rna[0]):
+    score = (calcScore(rna[0], rna[1]))
+    saveScore(dna, rna[0], rna[1], score)
+    print(verifySequence(dna, rna[0]))
+    print(calcScore(rna[0], rna[1]))
