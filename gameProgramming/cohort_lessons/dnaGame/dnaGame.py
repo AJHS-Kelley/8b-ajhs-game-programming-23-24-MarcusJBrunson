@@ -66,7 +66,7 @@ def calcScore(rnaSequence: str, rnaTime: float) -> int:
         score += 5000000
     else: # Slowest Time, Lowest Score
         score += 25000
-    return score 
+    return score # Remove this line, it is causing your function to exit early. 
 
     scoreMulti = 0.0
     if len(rnaSequence) >= 30: # Longest Sequence, Highest Multiplier 
@@ -84,7 +84,8 @@ def calcScore(rnaSequence: str, rnaTime: float) -> int:
     # Increase score, multiplier should be > 1.0 
      # Increase score, multiplier should be < 1.0
     score *= scoreMulti
-    return score 
+    return score # We only need this return once all score changes have calculated. 
+
 def saveScore(dnaSequence: str,rnaSequence: str, rnaTime: float, score: int) -> None:
     playername = input("What is your first name?\n")
     lastName = input("What is your name?\n")
@@ -104,7 +105,8 @@ def saveScore(dnaSequence: str,rnaSequence: str, rnaTime: float, score: int) -> 
     saveData.close()
     
     
-    
+    # The lines of code below should be OUTSIDE the scope of any functions.  Move them all 4 spaces to the LEFT. 
+    # Your code is not executing correctly due to these errors. 
     dna = genDNA()
     rna = doTranscription(dna)
     if verifySequence(dna, rna[0]):
