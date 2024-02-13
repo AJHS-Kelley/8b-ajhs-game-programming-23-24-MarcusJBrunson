@@ -27,7 +27,8 @@ while True:
     screen.blit(ground_surface,(0,300))
     screen.blit(text_surface,(300,50))
 
-
+    snail_rect.x -= 4
+    if snail_rect.right <= 0: snail_rect.left = 800
     screen.blit(snail_surface,snail_rect)
     screen.blit(player_surface,player_rect)
 
