@@ -1,6 +1,8 @@
 import pygame
 from sys import exit
 
+# Almost finished Marcus, let's get it done instead of trying to summon Blue Eyes White Dragon during class. 
+
 pygame.init()
 screen = pygame.display.set_mode((800, 400))
 pygame.display.set_caption('Runner')
