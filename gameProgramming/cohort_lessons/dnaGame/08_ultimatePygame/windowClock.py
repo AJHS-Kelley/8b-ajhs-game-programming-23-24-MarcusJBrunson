@@ -6,7 +6,7 @@ from sys import exit
 pygame.init()
 screen = pygame.display.set_mode((800, 400))
 pygame.display.set_caption('Runner')
-Clock = pygame.time.Clock()
+clock = pygame.time.Clock()
 test_font = pygame.font.Font(None, 50)
 
 sky_surface = pygame.image.load('img/ultimatePygame/Sky.png').convert()
@@ -21,6 +21,7 @@ snail_rect = snail_surface.get_rect(bottomright = (600,300))
 
 player_surface = pygame.image.load('img/ultimatePygame/player_walk_1.png').convert_alpha()
 player_rect = player_surface.get_rect(midbottom = (80,300))
+player_gravity = 0
 
 while True:
     for event in pygame.event.get():
@@ -47,6 +48,9 @@ while True:
     snail_rect.x -= 4
     if snail_rect.right <= 0: snail_rect.left = 800
     screen.blit(snail_surface,snail_rect)
+
+    # Player
+    player_gravity += 1
     screen.blit(player_surface,player_rect)
 
     # keys = pygame.key.get_pressed()
@@ -63,4 +67,4 @@ while True:
 
     
     pygame.display.update()
-    Clock.tick(60)
+    clock.tick(60)
