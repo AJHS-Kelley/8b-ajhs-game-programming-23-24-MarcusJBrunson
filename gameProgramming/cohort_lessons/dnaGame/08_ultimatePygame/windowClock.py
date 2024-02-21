@@ -22,7 +22,7 @@ snail_rect = snail_surface.get_rect(bottomright = (600,300))
 player_surface = pygame.image.load('img/ultimatePygame/player_walk_1.png').convert_alpha()
 player_rect = player_surface.get_rect(midbottom = (80,300))
 player_gravity = 0
-
+game_active = True
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -39,7 +39,8 @@ while True:
                     player_gravity = -20
             else:
                 if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-                    game_active = True   
+                    game_active = True
+                    snail_rect.left = 800
 
     if game_active:
         screen.blit(sky_surface,(0,0))
@@ -47,7 +48,6 @@ while True:
         screen.blit(score_surface,score_rect)
         pygame.draw.rect(screen, '#c0e8ec',score_rect)
         pygame.draw.rect(screen, '#c0e8ec',score_rect,10)
-
 
         snail_rect.x -= 4
         if snail_rect.right <= 0: snail_rect.left = 800
