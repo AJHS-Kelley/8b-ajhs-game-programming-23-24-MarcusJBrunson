@@ -5,6 +5,9 @@ from sys import exit
 
 def display_score():
     current_time = pygame.time.get_ticks()
+    score_surface = test_font.render(f'{current_time}',False,(64,64,64))
+    score_rect = score_surface.get_rect(center = (400,50))
+    screen.blit(score_surface,score_rect)
     print(current_time)
 
 pygame.init()
@@ -53,7 +56,7 @@ while True:
         # screen.blit(score_surface,score_rect)
         # pygame.draw.rect(screen, '#c0e8ec',score_rect)
         # pygame.draw.rect(screen, '#c0e8ec',score_rect,10)
-        display_score()
+        
         snail_rect.x -= 4
         if snail_rect.right <= 0: snail_rect.left = 800
         screen.blit(snail_surface,snail_rect)
