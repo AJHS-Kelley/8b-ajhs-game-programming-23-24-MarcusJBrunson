@@ -1,0 +1,10 @@
+Game Genre / Type: Fighting
+Theme: Bright, Colorful graphics -- luimnated setting 
+
+Win condition(s): Defeat the opponent health 
+Loss condition(s): Lose all your health 
+
+Win condition(s): Time runs out and you have more health than your opponent
+Loss condition(s): Time runs out and you have less health than your opponent
+
+
