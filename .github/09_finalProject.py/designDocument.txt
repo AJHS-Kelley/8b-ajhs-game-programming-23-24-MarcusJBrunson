@@ -6,10 +6,10 @@ Loss condition(s): Lose all your lives
 
 Levels / Screens: 
     -- Volcano 
-    -- Town 
+    -- Town  
 
     Objectives / Enemies / Obstacles
-    -- Various Enemies (Skull Enemies, dragons, warriors)
+    -- Various Enemies (Skeletons, Thieves, Dark Guld, Dragon)
 
     Items / Equipment / Objects 
     -- Power-Ups (Magic)
