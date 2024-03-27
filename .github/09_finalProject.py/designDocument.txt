@@ -1,10 +1,32 @@
-Game Genre / Type: Fighting
-Theme: Bright, Colorful graphics -- luimnated setting 
+Game Genre / Type: Adventure & Fantasy
+Theme: Bright/Dark Colorful and Dark graphics -- luimnated setting 
 
-Win condition(s): Defeat the opponent health 
-Loss condition(s): Lose all your health 
+Win condition(s): Reach the final boss 
+Loss condition(s): Lose all your lives
 
-Win condition(s): Time runs out and you have more health than your opponent
-Loss condition(s): Time runs out and you have less health than your opponent
+Levels / Screens: 
+    -- Volcano 
+    -- Town 
+
+    Objectives / Enemies / Obstacles
+    -- Various Enemies (Skull Enemies, dragons, warriors)
+
+    Items / Equipment / Objects 
+    -- Power-Ups (Magic)
+    -- (?)
+
+Difficulty Changes:
+    -- Lower player's health
+    -- Increase Enemies health
+    -- Decrease amount of Power-Ups available
+
+Controls: 
+    -- Mouse RIGHT-ARROW -- MOVE FORWARD 
+    -- MOUSE LEFT-ARROW -- MOVE BACKWARD 
+    -- MOUSE A KEY, Press -- Magic 
+    -- MOUSE D KEY, Press -- ATTACK
+    -- MOUSE F KEY, Press -- JUMP   
+
+
 
 
