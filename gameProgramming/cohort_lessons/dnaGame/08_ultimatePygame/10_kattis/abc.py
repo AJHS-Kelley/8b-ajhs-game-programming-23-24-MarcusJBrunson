@@ -4,7 +4,7 @@
 # assign correct values from least to greatest 
 # A < B < C 
 
-intergers = intput()
+intergers = input()
 a, b, c, = intergers.split()
 a = int(a)
 b = int(b)
@@ -15,7 +15,7 @@ if a >= b:
     a, b = b, a 
 if b >= c:
     b, c = c, b 
-    b <= a: 
+    b <= a 
     b, a = a, b
 print(f"a: {a} b: {b} c: {c}") 
 
@@ -30,9 +30,9 @@ myString = ""
 for i in range(len(order)): 
     if order [i] == "A":
         myString += str(a) + "  "
-    elif CODEGOESHERE:
-        CODEGOESHERE
+    elif order [i] == "B":
+        myString += str(b) + " "
     else: 
-        CODEGOESHERE
-
-    print(myString) 
+        myString += str(c) + " " 
+        
+print(myString) 
