@@ -24,3 +24,11 @@ pygame.display.set_caption('MARCUS FORTRESS -- HARD')
 screen = pygame.display.set_mode((x, y))  
 # CREATE AN IF / ELSE BLOCK TO SET THE RESOLUTION BASED ON THE VARIABLE ABOVE.
 
+# Colors 
+White = (255, 255, 255)
+Black = (0, 0, 0)
+
+player_image = pygame.image.load().convert()
+enemy_image = pygame.image.load().convert()
+background_image = pygame.image.load().convert()
+
