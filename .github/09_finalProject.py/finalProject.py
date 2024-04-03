@@ -19,8 +19,8 @@ if difficulty == 1:
 else: 
     pygame.display.set_caption('NAME OF GAME -- HARD')
 
-pygame.display.set_caption('MARCUS FORTRESS -- EASY')
-pygame.display.set_caption('MARCUS FORTRESS -- HARD')
+pygame.display.set_caption('MARCUS Golden Axe -- EASY')
+pygame.display.set_caption('MARCUS Golden Axe -- HARD')
 screen = pygame.display.set_mode((x, y))  
 # CREATE AN IF / ELSE BLOCK TO SET THE RESOLUTION BASED ON THE VARIABLE ABOVE.
 
@@ -31,6 +31,5 @@ Black = (0, 0, 0)
 player_image = pygame.image.load().convert()
 enemy_image = pygame.image.load().convert()
 background_image = pygame.image.load().convert()
-
 
 
