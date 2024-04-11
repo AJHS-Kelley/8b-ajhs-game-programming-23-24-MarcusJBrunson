@@ -1,5 +1,5 @@
 # Final Project, Marcus Brunson, v0.0
-import random, pygame
+import random, pygame 
 from sys import exit  
 
 resolution = 0 # 0 = Low Resolution (800, 600), 1 = High Resolution (1920, 1080)
@@ -22,14 +22,25 @@ if difficulty == 1:
 else: 
     pygame.display.set_caption('NAME OF GAME -- HARD') 
 
+# Intitalize Pygame
 pygame.init() 
+
+# Create the Screen 
 screen = pygame.display.set_mode((x, y))  
 pygame.display.set_caption('MARCUS Golden Axe -- EASY')
 pygame.display.set_caption('MARCUS Golden Axe -- HARD') 
 clock = pygame.time.Clock() 
 
+# Load Images
 sky_surface = pygame.image.load('img/ultimatePygame/Sky.png').convert()
 ground_surface = pygame.image.load('img/ultimatePygame/ground.png').convert()
+
+enemy_surface = pygame.image.load('img/ultimatePygame/01_Arachne.png').convert_alpha()
+snail_rect = enemy_surface.get_rect(bottomright = (600,300))
+
+player_surface = pygame.image.load('img/ultimatePygame/player_walk_1.png').convert_alpha()
+player_rect = player_surface.get_rect(midbottom = (80,300))
+player_gravity = 0
 
 game_active = True
 while True:
@@ -58,6 +69,4 @@ while True:
     pygame.display.update()
     clock.tick(60) 
 
-    # player_image = pygame.image.load().convert()
-    # enemy_image = pygame.image.load().convert()
 
