@@ -11,6 +11,7 @@ else:
     x = 1920 
     y = 1080
 
+pygame.init() 
 
 difficulty = int(input("Please choose a difficulty. Enter 1 for Easy or 2 for HARD.\n"))
 
@@ -19,11 +20,21 @@ if difficulty == 1:
 else: 
     pygame.display.set_caption('NAME OF GAME -- HARD') 
 
-pygame.init() 
 screen = pygame.display.set_mode((x, y))  
 pygame.display.set_caption('MARCUS Golden Axe -- EASY')
 pygame.display.set_caption('MARCUS Golden Axe -- HARD') 
 clock = pygame.time.Clock() 
+
+
+# while True:
+#     for event in pygame.event.get():
+#         if event.type == pygame.QUIT:
+#             pygame.quit()
+#             exit()
+
+    # pygame.display.update()
+    # clock.tick(60) 
+
 
 # Colors 
 WHITE = (255, 255, 255)
@@ -31,6 +42,6 @@ BLACK = (0, 0, 0)
 
 # player_image = pygame.image.load().convert()
 # enemy_image = pygame.image.load().convert()
-# background_image = pygame.image.load('img/ultimatePygame/Sky.png').convert()
+background_image = pygame.image.load('img/ultimatePygame/Sky.png').convert()
 
 
