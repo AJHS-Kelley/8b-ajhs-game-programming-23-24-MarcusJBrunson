@@ -1,5 +1,5 @@
 # Final Project, Marcus Brunson, v0.0
-import sys, random, pygame
+import random, pygame 
 
 resolution = 0 # 0 = Low Resolution (800, 600), 1 = High Resolution (1920, 1080)
 
