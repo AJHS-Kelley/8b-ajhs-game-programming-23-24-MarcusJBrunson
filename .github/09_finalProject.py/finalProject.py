@@ -3,7 +3,8 @@ import random
 import pygame 
 from sys import exit  
 
-resolution = 0 # 0 = Low Resolution (800, 600), 1 = High Resolution (1920, 1080)
+resolution = 0  # 0 = Low Resolution (800, 600), 1 = High Resolution (1920, 1080)
+resolution = int(input("Please choose resolution. Enter 0 for low res or 1 for high.\n"))
 
 if resolution == 0:
     x = 800
@@ -16,21 +17,21 @@ else:
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
-enemy_health = 100 
-player_health = 100
-player_damage = random.randint (int(20-40 * "difficulty"))
-
-difficulty = int(input("Please choose a difficulty. Enter 1 for Easy or 2 for HARD.\n"))
+# enemy_health = 100 
+# player_health = 100
+# player_damage = random.randint (40 * "difficulty") 
+                 
+difficulty = int(input("Please choose a difficulty. Enter 1 for Easy or 2 for HARD.\n")) 
 
 if difficulty == 1:
     pygame.display.set_caption('NAME OF GAME -- EASY')
-    player_damage = random.randint(int (20-40 * "difficulty"))
-    enemy_health = 100 
-    player_health = 100
+    # player_damage = random.randint(40 * "difficulty")
+    # enemy_health = 100 
+    # player_health = 100
 else: 
     pygame.display.set_caption('NAME OF GAME -- HARD') 
-    enemy_health = 100 
-    player_health = 70
+    # enemy_health = 100 
+    # player_health = 70
 
 # Intitalize Pygame
 pygame.init()
