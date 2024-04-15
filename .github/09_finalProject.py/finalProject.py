@@ -35,36 +35,32 @@ clock = pygame.time.Clock()
 sky_surface = pygame.image.load('img/ultimatePygame/Sky.png').convert()
 ground_surface = pygame.image.load('img/ultimatePygame/ground.png').convert()
 
-enemy_surface = pygame.image.load('img/ultimatePygame/01_Arachne.png').convert_alpha()
-snail_rect = enemy_surface.get_rect(bottomright = (600,300))
+snail_surface = pygame.image.load('img/ultimatePygame/snail1.png').convert_alpha()
+snail_rect = snail_surface.get_rect(bottomright = (600,300))
 
 player_surface = pygame.image.load('img/ultimatePygame/player_walk_1.png').convert_alpha()
 player_rect = player_surface.get_rect(midbottom = (80,300))
 player_gravity = 0
 
-game_active = True
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
-            exit() 
-
-        # if game_active:
-        #     if event.type == pygame.MOUSEBUTTONDOWN:
-        #         if player_rect.collidepoint(event.pos) and player_rect.bottom >= 300:
-        #             player_gravity = -20
+            exit()
+        
+        if game_active:
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if player_rect.collidepoint(event.pos) and player_rect.bottom >= 300:
+                    player_gravity = -20
             
-        #     if event.type == pygame.KEYDOWN:
-        #         if event.key == pygame.K_SPACE and player_rect.bottom >= 300:
-        #             player_gravity = -20
-        #     else:
-        #         if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-        #             game_active = True
-        #             demon_rect.left = 800
-
-    if game_active:
-        screen.blit(sky_surface,(0,0))
-        screen.blit(ground_surface,(0,300))
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE and player_rect.bottom >= 300:
+                    player_gravity = -20
+            else:
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+                    game_active = True
+                    snail_rect.left = 800
 
     pygame.display.update()
     clock.tick(60) 
