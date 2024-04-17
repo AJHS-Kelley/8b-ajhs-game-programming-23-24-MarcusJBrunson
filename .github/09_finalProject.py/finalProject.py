@@ -15,8 +15,9 @@ else:
 
 # Colors 
 WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
+BLACK = (0, 0, 0) 
 
+# Variables 
 # enemy_health = 100 
 # player_health = 100
 # player_damage = random.randint (40 * "difficulty") 
@@ -40,7 +41,7 @@ pygame.init()
 screen = pygame.display.set_mode((x, y)) 
 pygame.display.set_caption('MARCUS Golden Axe -- EASY')
 pygame.display.set_caption('MARCUS Golden Axe -- HARD') 
-clock = pygame.time.Clock()
+clock = pygame.time.Clock() 
 
 # Load Images
 sky_surface = pygame.image.load('img/ultimatePygame/Sky.png').convert()
@@ -73,8 +74,28 @@ while True:
 #                     game_active = True
 #                     snail_rect.left = 800
 
-pygame.display.update()
-clock.tick(60) 
+    if game_active:
+        screen.blit(sky_surface,(0,0))
+        screen.blit(ground_surface,(0,300))
+
+        # snail_rect.x -= 4
+        # if snail_rect.right <= 0: snail_rect.left = 800
+        # screen.blit(snail_surface,snail_rect)
+
+        # # Player
+        # player_gravity += 1
+        # player_rect.y = player_gravity
+        # if player_rect.bottom >= 300: player_rect.bottom = 300
+        # screen.blit(player_surface,player_rect)
+
+        # collision 
+        # if snail_rect.colliderect(player_rect):
+        #     game_active = False
+        # else:
+        #     screen.fill('Yellow')
+
+    pygame.display.update()
+    clock.tick(60) 
 
 
 
