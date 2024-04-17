@@ -18,21 +18,25 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0) 
 
 # Variables 
-# enemy_health = 100 
-# player_health = 100
-# player_damage = random.randint (40 * "difficulty") 
+enemy_health = 100 
+player_health = 100
+# player_damage = random.randint
+# magic_attack = random.randit 
                  
 difficulty = int(input("Please choose a difficulty. Enter 1 for Easy or 2 for HARD.\n")) 
 
 if difficulty == 1:
     pygame.display.set_caption('NAME OF GAME -- EASY')
-    # player_damage = random.randint(40 * "difficulty")
-    # enemy_health = 100 
-    # player_health = 100
+    enemy_health = 100 
+    player_health = 100
+    # player_damage = random.randint
+    # Magic_attack = random.randit 
 else: 
     pygame.display.set_caption('NAME OF GAME -- HARD') 
-    # enemy_health = 100 
-    # player_health = 70
+    enemy_health = 100 
+    player_health = 100
+    # player_damage = random.randint
+    # magic_attack = random.randit 
 
 # Intitalize Pygame
 pygame.init()
@@ -47,12 +51,12 @@ clock = pygame.time.Clock()
 sky_surface = pygame.image.load('img/ultimatePygame/Sky.png').convert()
 ground_surface = pygame.image.load('img/ultimatePygame/ground.png').convert()
 
-# snail_surface = pygame.image.load('img/ultimatePygame/snail1.png').convert_alpha()
-# snail_rect = snail_surface.get_rect(bottomright = (600,300))
+snail_surface = pygame.image.load('img/ultimatePygame/snail1.png').convert_alpha()
+snail_rect = snail_surface.get_rect(bottomright = (600,300))
 
-# player_surface = pygame.image.load('img/ultimatePygame/player_walk_1.png').convert_alpha()
-# player_rect = player_surface.get_rect(midbottom = (80,300))
-# player_gravity = 0
+player_surface = pygame.image.load('img/ultimatePygame/player_walk_1.png').convert_alpha()
+player_rect = player_surface.get_rect(midbottom = (80,300))
+player_gravity = 0
 
 game_active = True
 while True:
@@ -61,18 +65,18 @@ while True:
             pygame.quit()
             exit()
         
-#         if game_active:
-#             if event.type == pygame.MOUSEBUTTONDOWN:
-#                 if player_rect.collidepoint(event.pos) and player_rect.bottom >= 300:
-#                     player_gravity = -20
+        # if game_active:
+        #     if event.type == pygame.MOUSEBUTTONDOWN:
+        #         if player_rect.collidepoint(event.pos) and player_rect.bottom >= 300:
+        #             player_gravity = -20
             
-#             if event.type == pygame.KEYDOWN:
-#                 if event.key == pygame.K_SPACE and player_rect.bottom >= 300:
-#                     player_gravity = -20
-#             else:
-#                 if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-#                     game_active = True
-#                     snail_rect.left = 800
+        #     if event.type == pygame.KEYDOWN:
+        #         if event.key == pygame.K_SPACE and player_rect.bottom >= 300:
+        #             player_gravity = -20
+        #     else:
+        #         if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+        #             game_active = True
+        #             snail_rect.left = 800
 
     if game_active:
         screen.blit(sky_surface,(0,0))
@@ -86,16 +90,16 @@ while True:
         # player_gravity += 1
         # player_rect.y = player_gravity
         # if player_rect.bottom >= 300: player_rect.bottom = 300
-        # screen.blit(player_surface,player_rect)
+        # screen.blit(player_surface,player_rect) 
 
         # collision 
         # if snail_rect.colliderect(player_rect):
         #     game_active = False
-        # else:
-        #     screen.fill('Yellow')
+        #  else:
+        #      screen.fill('Yellow')
 
     pygame.display.update()
-    clock.tick(60) 
+    clock.tick(75)
 
 
 
