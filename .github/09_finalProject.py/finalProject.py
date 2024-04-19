@@ -18,7 +18,7 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0) 
 
 # Variables 
-enemy_health = 100 
+enemy_health = 100
 player_health = 100
 # player_damage = random.randint
 # magic_attack = random.randit
