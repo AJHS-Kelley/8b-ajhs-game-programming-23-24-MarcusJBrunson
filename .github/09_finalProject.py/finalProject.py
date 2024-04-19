@@ -20,14 +20,8 @@ BLACK = (0, 0, 0)
 # Variables 
 enemy_health = 100 
 player_health = 100
-# Mouserightarrow = moveforward 
-# Mouseleftarrow = movebackward
-# MOUSE LEFT-ARROW -- MOVE BACKWARD 
-# MOUSE A KEY, Press -- Magic 
-# MOUSE D KEY, Press -- ATTACK
-# MOUSE F KEY, Press -- JUMP
 # player_damage = random.randint
-# magic_attack = random.randit 
+# magic_attack = random.randit
                  
 difficulty = int(input("Please choose a difficulty. Enter 1 for Easy or 2 for HARD.\n")) 
 
@@ -39,8 +33,8 @@ if difficulty == 1:
     # Magic_attack = random.randit 
 else: 
     pygame.display.set_caption('NAME OF GAME -- HARD') 
-    enemy_health = 100 
-    player_health = 100
+    # enemy_health = 100 
+    # player_health = 100
     # player_damage = random.randint
     # magic_attack = random.randit 
 
