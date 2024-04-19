@@ -45,7 +45,10 @@ pygame.init()
 screen = pygame.display.set_mode((x, y)) 
 pygame.display.set_caption('MARCUS Golden Axe -- EASY')
 pygame.display.set_caption('MARCUS Golden Axe -- HARD') 
-clock = pygame.time.Clock() 
+clock = pygame.time.Clock()
+game_active = False
+start_time = 0
+score = 0
 
 # Load Images
 sky_surface = pygame.image.load('img/ultimatePygame/Sky.png').convert()
