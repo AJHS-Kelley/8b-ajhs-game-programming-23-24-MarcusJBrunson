@@ -103,7 +103,7 @@ while True:
         # if snail_rect.colliderect(player_rect):
         #     game_active = False
         #  else:
-        #      screen.fill('Yellow')
+        #       screen.fill('Yellow')
 
     pygame.display.update()
     clock.tick(75)
