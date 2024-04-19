@@ -20,6 +20,12 @@ BLACK = (0, 0, 0)
 # Variables 
 enemy_health = 100 
 player_health = 100
+# Mouserightarrow = moveforward 
+# Mouseleftarrow = movebackward
+# MOUSE LEFT-ARROW -- MOVE BACKWARD 
+# MOUSE A KEY, Press -- Magic 
+# MOUSE D KEY, Press -- ATTACK
+# MOUSE F KEY, Press -- JUMP
 # player_damage = random.randint
 # magic_attack = random.randit 
                  
@@ -51,8 +57,8 @@ clock = pygame.time.Clock()
 sky_surface = pygame.image.load('img/ultimatePygame/Sky.png').convert()
 ground_surface = pygame.image.load('img/ultimatePygame/ground.png').convert()
 
-snail_surface = pygame.image.load('img/ultimatePygame/snail1.png').convert_alpha()
-snail_rect = snail_surface.get_rect(bottomright = (600,300))
+# snail_surface = pygame.image.load('img/ultimatePygame/snail1.png').convert_alpha()
+# snail_rect = snail_surface.get_rect(bottomright = (600,300))
 
 player_surface = pygame.image.load('img/ultimatePygame/player_walk_1.png').convert_alpha()
 player_rect = player_surface.get_rect(midbottom = (80,300))
@@ -86,11 +92,18 @@ while True:
         # if snail_rect.right <= 0: snail_rect.left = 800
         # screen.blit(snail_surface,snail_rect)
 
-        # # Player
-        # player_gravity += 1
+        # Player
+        player_gravity += 1
         # player_rect.y = player_gravity
-        # if player_rect.bottom >= 300: player_rect.bottom = 300
-        # screen.blit(player_surface,player_rect) 
+        if player_rect.bottom >= 300: player_rect.bottom = 300
+        screen.blit(player_surface,player_rect) 
+
+        # Controls:
+        # Mouse RIGHT-ARROW -- MOVE FORWARD 
+        # MOUSE LEFT-ARROW -- MOVE BACKWARD 
+        # MOUSE A KEY, Press -- Magic 
+        # MOUSE D KEY, Press -- ATTACK
+        # MOUSE F KEY, Press -- JUMP   
 
         # collision 
         # if snail_rect.colliderect(player_rect):
