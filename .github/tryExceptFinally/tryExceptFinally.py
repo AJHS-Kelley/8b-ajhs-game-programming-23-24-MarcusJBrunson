@@ -3,12 +3,14 @@
 
 try: # The code in this block is ALWAYS excuted.
     myVaraible = 1 
-    print(myVaraibl)
-except NameError: # This code will run if there is an error (exception)
+    print(myVaraible)
+    myString = "Five"
+    print(float(myString))
+except ValueError: # This code will run if there is an error (exception) raised
     print("There is an incorrect variable name in your code.")
-except:
-    print("Something has gone wrong!") 
+# except:
+#     print("Something has gone wrong!") 
 else: # This code runs if there are no ERRORS
     print("Code excuted correctly with no exceptions.\n")
 finally: # This code always runs, it's like the TERMINATOR 
-    print("I'll be back")
+    print("I'll be back.\n")
