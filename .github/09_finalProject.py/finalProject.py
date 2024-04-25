@@ -1,7 +1,7 @@
 # Final Project, Marcus Brunson, v0.0
-import random
+import random 
 import pygame 
-from sys import exit  
+from sys import exit 
 
 resolution = 0  # 0 = Low Resolution (800, 600), 1 = High Resolution (1920, 1080)
 resolution = int(input("Please choose resolution. Enter 0 for low res or 1 for high.\n"))
@@ -68,18 +68,18 @@ while True:
             pygame.quit()
             exit()
         
-        # if game_active:
-        #     if event.type == pygame.MOUSEBUTTONDOWN:
-        #         if player_rect.collidepoint(event.pos) and player_rect.bottom >= 300:
-        #             player_gravity = -20
+        if game_active:
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if player_rect.collidepoint(event.pos) and player_rect.bottom >= 300:
+                    player_gravity = -20
             
-        #     if event.type == pygame.KEYDOWN:
-        #         if event.key == pygame.K_SPACE and player_rect.bottom >= 300:
-        #             player_gravity = -20
-        #     else:
-        #         if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-        #             game_active = True
-        #             snail_rect.left = 800
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE and player_rect.bottom >= 300:
+                    player_gravity = -20
+            else:
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+                    game_active = True
+                    # snail_rect.left = 800
 
     if game_active:
         screen.blit(sky_surface,(0,0))
