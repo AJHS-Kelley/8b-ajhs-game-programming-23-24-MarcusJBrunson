@@ -14,7 +14,8 @@ else:
     y = 1080
 # Debugging Laws 
 logfile = "MarcusGoldenAxeDebugLog.txt"
-logData = open(logfile, "w")
+logData = open(logfile, "w") 
+
 # Colors 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0) 
