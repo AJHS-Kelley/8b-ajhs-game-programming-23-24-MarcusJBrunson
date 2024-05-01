@@ -12,7 +12,9 @@ if resolution == 0:
 else:
     x = 1920 
     y = 1080
-
+# Debugging Laws 
+logfile = "MarcusGoldenAxeDebugLog.txt"
+logData = open(logfile, "w")
 # Colors 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0) 
@@ -46,8 +48,8 @@ pygame.init()
 
 # Create the Screen 
 screen = pygame.display.set_mode((x, y)) 
-pygame.display.set_caption('MARCUS Golden Axe -- EASY')
-pygame.display.set_caption('MARCUS Golden Axe -- HARD') 
+pygame.display.set_caption('Marcus Golden Axe -- EASY')
+pygame.display.set_caption('Marcus Golden Axe -- HARD') 
 clock = pygame.time.Clock()
 game_active = False
 start_time = 0
