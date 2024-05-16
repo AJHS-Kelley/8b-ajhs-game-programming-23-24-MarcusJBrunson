@@ -57,6 +57,8 @@ game_active = False
 start_time = 0
 score = 0
 
+player_rect = pygame.Rect(x,y)
+
 # Load Images
 sky_surface = pygame.image.load('img/ultimatePygame/Sky.png').convert()
 ground_surface = pygame.image.load('img/ultimatePygame/ground.png').convert()
@@ -91,6 +93,11 @@ while True:
     if game_active:
         screen.blit(sky_surface,(0,0))
         screen.blit(ground_surface,(0,300))
+
+    # Get list of all keys currently being pressed down
+        keys = pygame.key.get_pressed()
+
+        # Move the player
 
         # snail_rect.x -= 4
         # if snail_rect.right <= 0: snail_rect.left = 800
