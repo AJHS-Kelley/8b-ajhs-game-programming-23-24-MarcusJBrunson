@@ -24,8 +24,8 @@ BLACK = (0, 0, 0)
 # Powerups = ""
 # enemy_health = 100
 # player_health = 100
-# player_damage = random.randint
-# magic_attackdamage = random.randit
+# player_damage = random.randint(20,40)
+# magic_attackdamage = random.randit(20,80)
                  
 difficulty = int(input("Please choose a difficulty. Enter 1 for Easy or 2 for HARD.\n")) 
 
@@ -102,7 +102,7 @@ while True:
         # if keys[pygame.K_RIGHT]:
 
         # Flip the display (update the game window)
-        pygame.display.flip()
+        # pygame.display.flip()
     
         # snail_rect.x -= 4
         # if snail_rect.right <= 0: snail_rect.left = 800
